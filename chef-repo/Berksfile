@@ -1,0 +1,11 @@
+site :opscode
+
+cookbook 'chef-solo-search', git: 'https://github.com/edelight/chef-solo-search'
+cookbook 'users', git: 'https://github.com/opscode-cookbooks/users.git'
+cookbook 'sudo', git: 'https://github.com/opscode-cookbooks/sudo.git'
+cookbook 'java', git: 'https://github.com/cookbooks/java.git'
+
+
+cookbook 'build-essential', git: 'https://github.com/opscode-cookbooks/build-essential'
+cookbook 'ruby_build', git: 'https://github.com/fnichol/chef-ruby_build'
+cookbook 'rbenv', git: 'https://github.com/fnichol/chef-rbenv'

@@ -1,0 +1,49 @@
+{
+    "rbenv": {
+        "rubies": [
+            {
+                "name": "jruby-1.7.8",
+                "environment": {
+                    "JAVA_HOME": "/usr/lib/jvm/java-6-openjdk-i386"
+                }
+            }
+        ],
+        "global": "jruby-1.7.8"
+        ,
+        "gems": {
+            "jruby-1.7.8": [
+                {
+                    "name": "bundler"
+                },
+                {
+                    "name": "torquebox-server"
+                },
+                {
+                    "name": "torquebox-backstage"
+                }
+            ]
+        }
+    },
+    "authorization": {
+        "sudo": {
+            "groups": [
+                "sysadmin"
+            ],
+            "users": [
+                "deployer",
+                "vagrant"
+            ],
+            "passwordless": "true"
+        }
+    },
+    
+    "run_list": [
+       "recipe[chef-solo-search]",
+        "recipe[users::sysadmins]",
+        "recipe[sudo]",
+        "recipe[build-essential]",
+        "recipe[java::openjdk]",
+        "recipe[ruby_build]",
+        "recipe[rbenv::system]"
+    ]
+}

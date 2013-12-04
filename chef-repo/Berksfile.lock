@@ -1,0 +1,39 @@
+{
+  "sources": {
+    "chef-solo-search": {
+      "locked_version": "0.5.1",
+      "git": "https://github.com/edelight/chef-solo-search",
+      "ref": "681f78a108f5f8a3655551b32d9939603628c568"
+    },
+    "users": {
+      "locked_version": "1.6.1",
+      "git": "https://github.com/opscode-cookbooks/users.git",
+      "ref": "d5a1a741e15b56c770a037f341495e29ac753e1b"
+    },
+    "sudo": {
+      "locked_version": "2.2.3",
+      "git": "https://github.com/opscode-cookbooks/sudo.git",
+      "ref": "6a616bcf0c7e26918103bca976064996dcd08350"
+    },
+    "java": {
+      "locked_version": "1.4.0",
+      "git": "https://github.com/cookbooks/java.git",
+      "ref": "05e45129b1fd1bbad18c790fcd814ba36403cab1"
+    },
+    "build-essential": {
+      "locked_version": "1.4.2",
+      "git": "https://github.com/opscode-cookbooks/build-essential",
+      "ref": "7f4d351036f10e7b641e1df137390491d6111669"
+    },
+    "ruby_build": {
+      "locked_version": "0.8.1",
+      "git": "https://github.com/fnichol/chef-ruby_build",
+      "ref": "4d3361995a6953076951693eff1b326ab499fe1e"
+    },
+    "rbenv": {
+      "locked_version": "0.7.3",
+      "git": "https://github.com/fnichol/chef-rbenv",
+      "ref": "9afb4e5da2e6212504a12de3bbbd410cd96100f6"
+    }
+  }
+}
