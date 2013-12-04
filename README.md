@@ -64,15 +64,14 @@ And torquebox starts successfully. This should be run as a service by the torque
 
 Select AMI from [Ubuntu Cloud finder][2]. Use EBS backed volume in US East with Arch i386 and name Precise same as the vagrant virtual box 
 
-$ vagrant up --provider=aws
+    $ vagrant up --provider=aws
 
 aws creates an ubuntu user as superuser, so vagrant ssh logs in as ubuntu user
 
-$ vagrant ssh-config --host catalog >> ~/.ssh/config
-$ knife solo prepare ubuntu@catalog
-$ cd chef-repo
-$ knife solo cook ubuntu@catalog
-
+    $ vagrant ssh-config --host catalog >> ~/.ssh/config
+    $ knife solo prepare ubuntu@catalog
+    $ cd chef-repo
+    $ knife solo cook ubuntu@catalog
 
   [1]: http://www.vagrantup.com/
   [2]: http://cloud-images.ubuntu.com/locator/ec2/ 
