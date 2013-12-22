@@ -5,8 +5,17 @@ Vagrant.configure("2") do |config|
   config.vm.hostname = "catalog"
   config.vm.box = "precise32"
   config.vm.box_url = "http://files.vagrantup.com/precise32.box"
-  config.vm.network "forwarded_port", guest: 8080, host: 1234
   
+  config.vm.define "primary" do |primary|
+      primary.vm.box = "precise32"
+      primary.vm.network "forwarded_port", guest: 8080, host: 1234
+  end
+
+  config.vm.define "secondary" do |secondary|
+    secondary.vm.box = "precise32"
+    secondary.vm.network "forwarded_port", guest: 8080, host: 1235
+  end
+    
   # Every Vagrant virtual environment requires a box to build off of.
   config.vm.box = "dummy"
   config.vm.provider :aws do |aws, override|
@@ -21,6 +30,7 @@ Vagrant.configure("2") do |config|
       aws.ami = "ami-c5a98cac" 
       aws.instance_type = "m1.medium"
       override.ssh.username = "ubuntu"
+      aws.instance_ready_timeout = 300
   end
   
   config.vm.provider :digital_ocean do |provider|

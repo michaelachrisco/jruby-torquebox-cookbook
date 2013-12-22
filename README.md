@@ -72,9 +72,12 @@ aws creates an ubuntu user as superuser, so vagrant ssh logs in as ubuntu user
     $ knife solo prepare ubuntu@catalog
     $ cd chef-repo
     $ knife solo cook ubuntu@catalog
+    
 
   [1]: http://www.vagrantup.com/
   [2]: http://cloud-images.ubuntu.com/locator/ec2/ 
+  
+   
 
 
 

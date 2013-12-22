@@ -5,16 +5,6 @@
       "git": "https://github.com/edelight/chef-solo-search",
       "ref": "681f78a108f5f8a3655551b32d9939603628c568"
     },
-    "users": {
-      "locked_version": "1.6.1",
-      "git": "https://github.com/opscode-cookbooks/users.git",
-      "ref": "d5a1a741e15b56c770a037f341495e29ac753e1b"
-    },
-    "sudo": {
-      "locked_version": "2.2.3",
-      "git": "https://github.com/opscode-cookbooks/sudo.git",
-      "ref": "6a616bcf0c7e26918103bca976064996dcd08350"
-    },
     "java": {
       "locked_version": "1.4.0",
       "git": "https://github.com/cookbooks/java.git",

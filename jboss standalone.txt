@@ -1,0 +1,34 @@
+Notes on how to setupt orquebox running as a service
+
+https://community.jboss.org/wiki/HowToInstallJBossAS7AsALinuxService
+
+
+Update standalone.sh and add 
+
+export JRUBY_HOME="/usr/local/var/rbenv/versions/jruby-1.7.8"
+
+
+update standalone script since init-functions are missing
+
+Also script uses sh shell instead of bash even though uses bash let command
+
+so update jboss-as-standalone.sh
+
+sudo useradd torquebox_user
+
+sudo chown -R torquebox_user:torquebox_user /usr/local/rbenv/versions/jruby-1.7.8/lib/ruby/gems/shared/gems/torquebox-server-3.0.1-java
+
+chown -R jboss. /jboss
+
+
+sudo service jboss-as-standalone start &
+
+Adding SSL 
+
+http://docs.jboss.org/mod_cluster/1.0.0/html/UsingSSL.html
+
+Only secure 12.1.1  Apache httpd configuration 
+
+and terminate SSL at Jboss part
+
+wget http://downloads.jboss.org/mod_cluster//1.2.6.Final/linux-i686/mod_cluster-1.2.6.Final-linux2-x86-ssl.tar.gz
